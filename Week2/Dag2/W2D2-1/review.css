@@ -1,0 +1,37 @@
+h1{
+    color: blue;
+    font-size: 25px;
+}
+
+.rev1{
+    color: rgb(125, 114, 228);
+}
+
+h2{
+    color: green;
+    font-size: 25px;
+}
+.rev2{
+    color: rgb(8, 194, 39);
+}
+.rev3{
+    color: red;
+}
+
+h3{
+    color: rgb(219, 18, 18);
+    font-size: 25px;
+}
+
+h4{
+    color: orange;
+    font-size: 25px;
+}
+.rev4{
+    color: rgb(247, 175, 43);
+}
+
+
+li{
+    padding: 5px;
+}
