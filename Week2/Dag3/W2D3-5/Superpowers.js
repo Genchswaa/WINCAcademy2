@@ -115,7 +115,7 @@ const superHeroList = [
   const superHeroNames = superHeroList.map((superHeroNames) => {
     return superHeroNames.name
   });
- //console.log(superHeroNames);
+//  console.log(superHeroNames);
 
  //2: Alle lichte superhelden_____________________________________________________
  // Ik wil alle superhelden die minder dan 190 wegen. 
