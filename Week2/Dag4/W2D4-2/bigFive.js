@@ -11,14 +11,12 @@ Array.from(buttonAnimals).forEach((buttonAnimals) => {
         alert('TESTESTEST')
     });   
 });
-//____________________________________________________________________
-//____________________________________________________________________
 Array.from(buttonAnimals).forEach((buttonAnimals) => {
     console.log(buttonAnimals.textContent)
 });
-
-
-
+//____________________________________________________________________
+//____________________________________________________________________
+// Instructie van de video. Ik wil een nieuwe list item maken.
 let newAnimal = document.createElement('li');
 console.log(newAnimal);
 
@@ -28,17 +26,41 @@ let spottedAnimalsMenu = document.getElementById("spotted-animals-list").getElem
 console.log(spottedAnimalsMenu);
 
 newSpecies.appendChild(newAnimal);
-console.log(newSpecies);
+console.log('aap', newSpecies);
 
 
 // OPDRACHT 2:_______Verwijder elementen uit DOM
+
+let parent = document.getElementById
+//________________________________________________________________________
 // Bij klik moet eend verdwijnen.
+// maak eerst een variabele aan voor de knop (removeDuckButton)
+const removeDuckButton = document.getElementById("remove-first-item-button");
 
-const removeDuckButton = document.querySelector(".remove-first-item-button");
-console.log(removeDuckButton);
-// removeDuckButton.addEventListener('click', function(){
- 
-// });
+// Check dit met de console.log
+console.log(removeDuckButton); // ok check
 
-// node.remove();
-// <li class="spotted-animals-list-item">Duck</li>
+// maak een variabele voor datgene wat je weg wil hebben.
+const duckElement = document.getElementById("spotted-animals-list")
+
+// check dit met de console.log
+console.log(duckElement); // ok check
+
+// Koppel een event aan de knop.
+// in de function van het event zeg je wat het moet doen bij een klik.
+//const donaldDuck = document.querySelectorAll("spotted-animals-list-item");
+
+removeDuckButton.addEventListener('click', function(){
+// In het event wordt hetgeen je weg wilt gekoppeld aan de functie remove
+    duckElement.remove();
+});
+
+//___________________________________________________________________________
+
+// Opdracht 3:______
+const removeAllAnimals = document.getElementById("remove-all-button");
+console.log(removeAllAnimals);
+const listOfAllAnimals = document.getElementById("spotted-animals-list");
+console.log(listOfAllAnimals);removeAllAnimals.addEventListener('click', function(){
+    listOfAllAnimals.remove();
+});
