@@ -248,20 +248,33 @@
   ]
   
   //___________________________________________________________
-  //Ik wil een lijst net alle films en de posters die beschikbaar zijn.
+  // Ik wil een lijst net alle films en de posters die beschikbaar zijn.
   // Ik maak een variabele aan met functie om door de lijst heen te gaan en titels te zoeken met map.
 
-  const availableMovies = movieList.map((movieList) => {
-  
-    return movieList.Title
-  });
-console.log(availableMovies);
+let testLijst = document.getElementById("test");
+let newLi = document.createElement("li");
+testLijst.appendChild(newLi);
 
+const addmoviesToDom = movieList.map((movieList) => {
+  return movieList.Title
+});
+// console.log(addmoviesToDom);
+const movieLink = movieList.map((movieList) => {
+  return movieList.Poster
+});
 
-//________________________________________________________________________________
+let browserList = movieLink
+browserList.forEach(function(browserList) {
+  let newLi = document.createElement("li");
+  testLijst += '<li>'+ browserList + '</li>';
+}); 
+testLijst += '</ul>';
+document.getElementById("test").innerHTML = testLijst;
+
+//____________________________________________________________________________
 // ALVAST FILTERS MAKEN___________________________________________________________
 
-// OPDRACHT 5: alle films na 2014
+// OPDRACHT 4: alle films na 2014
 // Ik maak een variabele aan / newReleases. Ik wil alle films na 2014.
 const newReleases = (movielist) => {
   // Filter eerst alle films uit de lijst na 2014. list.year moet hoger zijn dan 2014.
@@ -276,6 +289,14 @@ const newReleases = (movielist) => {
 // console.log ter controle / Werkt. Krijg een lijst van films.
 // console.log(newReleases(movieList));
 //__________________________________________________________________________________________
+// Opdracht 5: alle avengerfilms
+const avengerMovies = (movielist) => {
+  const avengerInTheTitle = movielist.filter((list) => list.Title.includes("Avengers"))
+  const titleWithAvengers = avengerInTheTitle.map((list) => list.Title);
+  return titleWithAvengers
+};
+// console.log(avengerMovies(movieList));
+
 //___________________________________________________________________________________
 
 // OPDRACHT 6: ALle films met X-men in de titel
@@ -306,3 +327,26 @@ const batmanMovies = (movielist) => {
   return titleWithBatman
 };
 //  console.log(batmanMovies(movieList));
+
+
+
+// 6: Filters vastmaken aan de buttons
+//_________________________________________________
+// const radioButtons = document.querySelectorAll(".radioBtn");
+// Array.from(radioButtons).forEach((radioButtons) => {
+//     radioButtons.addEventListener('change', function(){
+//         console.log(event.target.id)
+//     });   
+// });
+
+
+const releaseBtn = document.getElementById("releases");
+releaseBtn.addEventListener('change', function(){
+  console.log(newReleases(movieList));
+  });
+
+  const avengerBtn = document.getElementById("avengers");
+avengerBtn.addEventListener('change', function(){
+    console.log(avengerMovies(movieList));
+  });
+
