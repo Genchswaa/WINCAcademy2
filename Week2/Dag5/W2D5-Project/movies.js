@@ -247,29 +247,50 @@
     }
   ]
   
-  //___________________________________________________________
-  // Ik wil een lijst net alle films en de posters die beschikbaar zijn.
-  // Ik maak een variabele aan met functie om door de lijst heen te gaan en titels te zoeken met map.
+//__________________________________________________________
 
+// Test maken van nieuwe Li.
 let testLijst = document.getElementById("test");
 let newLi = document.createElement("li");
 testLijst.appendChild(newLi);
 
+// Filter alle filmnamen.
 const addmoviesToDom = movieList.map((movieList) => {
   return movieList.Title
 });
 // console.log(addmoviesToDom);
+
+// Filter alle links
 const movieLink = movieList.map((movieList) => {
   return movieList.Poster
 });
 
+// TestFuncie voor invoegen van plaatje met url
+// Werkt wel wanneer alleen de link wordt ingezet.
+//________________________________________________
+// function moviePoster() {
+  // let img = document.createElement("img");
+  //img.src = 'https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png';
+  // document.getElementById("test").appendChild(img);
+// };
+// moviePoster();
+
+
+//Invoegen van Li met als inhoude de link van de films.________________
 let browserList = movieLink
+
 browserList.forEach(function(browserList) {
-  let newLi = document.createElement("li");
   testLijst += '<li>'+ browserList + '</li>';
 }); 
 testLijst += '</ul>';
 document.getElementById("test").innerHTML = testLijst;
+
+
+//Test voor plaatje maken van elke link___________________
+movieLink.forEach(function(browserList, index) {
+  let img = document.createElement("img")
+  img.src = movieLink}
+  );
 
 //____________________________________________________________________________
 // ALVAST FILTERS MAKEN___________________________________________________________
@@ -330,18 +351,20 @@ const batmanMovies = (movielist) => {
 
 
 
-// 6: Filters vastmaken aan de buttons
+// 6: Filters vastmaken aan de buttons. event.target laat zien in DOM op welke radio er wordt gedrukt.
 //_________________________________________________
-// const radioButtons = document.querySelectorAll(".radioBtn");
-// Array.from(radioButtons).forEach((radioButtons) => {
-//     radioButtons.addEventListener('change', function(){
-//         console.log(event.target.id)
-//     });   
-// });
+const radioButtons = document.querySelectorAll(".radioBtn");
+Array.from(radioButtons).forEach((radioButtons) => {
+    radioButtons.addEventListener('change', function(){
+        console.log(event.target.id)
+    });   
+});
 
-
+// Laat lijsten uit de filter zien in de DOM. Ik wil een array uit de filters wanneer de radio wordt aangeklikt.
+// Hoe te koppelen? Change werkt.
 const releaseBtn = document.getElementById("releases");
 releaseBtn.addEventListener('change', function(){
+
   console.log(newReleases(movieList));
   });
 
@@ -350,3 +373,16 @@ avengerBtn.addEventListener('change', function(){
     console.log(avengerMovies(movieList));
   });
 
+  const xmenBtn = document.getElementById("xmen");
+xmenBtn.addEventListener('change', function(){
+    console.log(xmenMovies(movieList));
+  });
+
+  const princessBtn = document.getElementById("princess");
+  princessBtn.addEventListener('change', function(){
+      console.log(princessMovies(movieList));
+    });
+    const batmanBtn = document.getElementById("batman");
+  batmanBtn.addEventListener('change', function(){
+      console.log(princessMovies(movieList));
+    });
