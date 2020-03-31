@@ -6,21 +6,21 @@ greater than the value 10. Log the result to the console.
 */
 
 
-// function testNum(x) {
+function testNum(x) {
     
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//         if (x < 10) {
-//             resolve("Getal is kleiner dan 10");
-//         } else {
-//             reject("Getal is groter dan 10"); 
-//         } 
-//         });  
-//         });
-//     }
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+        if (x < 10) {
+            resolve("Getal is kleiner dan 10");
+        } else {
+            reject("Getal is groter dan 10"); 
+        } 
+        });  
+        });
+    }
 
-// testNum(2)
-// .catch(xNr => console.log(xNr));
+testNum(2)
+.catch(xNr => console.log(xNr));
 
   
 /*
