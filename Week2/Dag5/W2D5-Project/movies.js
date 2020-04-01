@@ -248,22 +248,35 @@
   ]
   
 //__________________________________________________________
+const movieListPosterOverview = movieList => {
+  let li = document.createElement("li");
+  let a = document.createElement("a");
+  let img = document.createElement("img");
+  
+  li.classlist.add("list-item");
+  a.href = "https://www.imdb.com/title/" + movieList.imdbID;
+  img.src = movieList.Poster;
+  
+  li.appendChild(a);
+  a.appendChild(img);
+  return li;
+  };
+  
+// // Test maken van nieuwe Li.
+// let testLijst = document.getElementById("test");
+// let newLi = document.createElement("li");
+// testLijst.appendChild(newLi);
 
-// Test maken van nieuwe Li.
-let testLijst = document.getElementById("test");
-let newLi = document.createElement("li");
-testLijst.appendChild(newLi);
+// // Filter alle filmnamen.
+// const addmoviesToDom = movieList.map((movieList) => {
+//   return movieList.Title
+// });
+// // console.log(addmoviesToDom);
 
-// Filter alle filmnamen.
-const addmoviesToDom = movieList.map((movieList) => {
-  return movieList.Title
-});
-// console.log(addmoviesToDom);
-
-// Filter alle links
-const movieLink = movieList.map((movieList) => {
-  return movieList.Poster
-});
+// // Filter alle links
+// const movieLink = movieList.map((movieList) => {
+//   return movieList.Poster
+// });
 
 // TestFuncie voor invoegen van plaatje met url
 // Werkt wel wanneer alleen de link wordt ingezet.
@@ -277,20 +290,36 @@ const movieLink = movieList.map((movieList) => {
 
 
 //Invoegen van Li met als inhoude de link van de films.________________
-let browserList = movieLink
+// let browserList = movieLink
 
-browserList.forEach(function(browserList) {
-  testLijst += '<li>'+ browserList + '</li>';
-}); 
-testLijst += '</ul>';
-document.getElementById("test").innerHTML = testLijst;
+// browserList.forEach(function(browserList) {
+//   testLijst += '<li>'+ browserList + '</li>';
+//   a.href = "https://www.imdb.com/title/" + movie.imdbID;
+//   img.src = movie.Poster
+// }); 
+// testLijst += '</ul>';
+// document.getElementById("test").innerHTML = testLijst;
+// const movieListPosterOverview = movieList => {
+// let newli = document.createElement("li");
+// let newA = document.createElement("a");
+// let img = document.createElement("img");
+
+// li.classlist.add("movieLijst");
+// a.href = "https://www.imdb.com/title/" + movie.imdbID;
+// img.src = movie.Poster;
+
+// li.appendChild(newA);
+// a.appendChild(img);
+// return li;
+// };
+
 
 
 //Test voor plaatje maken van elke link___________________
-movieLink.forEach(function(browserList, index) {
-  let img = document.createElement("img")
-  img.src = movieLink}
-  );
+// movieLink.forEach(function(browserList, index) {
+//   let img = document.createElement("img")
+//   img.src = movieLink}
+//   );
 
 //____________________________________________________________________________
 // ALVAST FILTERS MAKEN___________________________________________________________
