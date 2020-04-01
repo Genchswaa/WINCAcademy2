@@ -248,19 +248,36 @@
   ]
   
 // //__________________________________________________________
-const movieListPosterOverview = movieList => {
+// const movieListPosterOverview = movieList => {
+//   let li = document.createElement("li");
+//   let a = document.createElement("a");
+//   let img = document.createElement("img");
+  
+//   li.classlist.add("list-item");
+//   a.href = "https://www.imdb.com/title/" + movieList.imdbID;
+//   img.src = movieList.Poster;
+  
+//   li.appendChild(a);
+//   a.appendChild(img);
+//   return li;
+//   };
+
+function createListItem (text) {
   let li = document.createElement("li");
-  let a = document.createElement("a");
-  let img = document.createElement("img");
-  
-  li.classlist.add("list-item");
-  a.href = "https://www.imdb.com/title/" + movieList.imdbID;
-  img.src = movieList.Poster;
-  
-  li.appendChild(a);
-  a.appendChild(img);
+  li.textContent = text;
   return li;
-  };
+  }
+  const liLijst = document.getElementById("tweede");
+  const items = [
+      createListItem("Roosje"),
+      createListItem("Sander"),
+      createListItem("Gian")
+  ];
+  
+  //Nieuwe mothode_____________________________
+  // items.forEach(function(li) {
+  //     liLijst.appendChild(li)
+  // });
   
 // Test maken van nieuwe Li.
 let testLijst = document.getElementById("test");
