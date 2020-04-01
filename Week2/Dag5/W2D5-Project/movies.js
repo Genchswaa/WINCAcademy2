@@ -247,7 +247,7 @@
     }
   ]
   
-//__________________________________________________________
+// //__________________________________________________________
 const movieListPosterOverview = movieList => {
   let li = document.createElement("li");
   let a = document.createElement("a");
@@ -262,21 +262,21 @@ const movieListPosterOverview = movieList => {
   return li;
   };
   
-// // Test maken van nieuwe Li.
-// let testLijst = document.getElementById("test");
-// let newLi = document.createElement("li");
-// testLijst.appendChild(newLi);
+// Test maken van nieuwe Li.
+let testLijst = document.getElementById("test");
+let newLi = document.createElement("li");
+testLijst.appendChild(newLi);
 
-// // Filter alle filmnamen.
-// const addmoviesToDom = movieList.map((movieList) => {
-//   return movieList.Title
-// });
-// // console.log(addmoviesToDom);
+// Filter alle filmnamen.
+const addmoviesToDom = movieList.map((movieList) => {
+  return movieList.Title
+});
+// console.log(addmoviesToDom);
 
-// // Filter alle links
-// const movieLink = movieList.map((movieList) => {
-//   return movieList.Poster
-// });
+// Filter alle links
+const movieLink = movieList.map((movieList) => {
+  return movieList.Poster
+});
 
 // TestFuncie voor invoegen van plaatje met url
 // Werkt wel wanneer alleen de link wordt ingezet.
@@ -290,15 +290,15 @@ const movieListPosterOverview = movieList => {
 
 
 //Invoegen van Li met als inhoude de link van de films.________________
-// let browserList = movieLink
 
-// browserList.forEach(function(browserList) {
-//   testLijst += '<li>'+ browserList + '</li>';
-//   a.href = "https://www.imdb.com/title/" + movie.imdbID;
-//   img.src = movie.Poster
-// }); 
-// testLijst += '</ul>';
-// document.getElementById("test").innerHTML = testLijst;
+let browserList = movieLink
+browserList.forEach(function(browserList) {
+  testLijst += '<li>'+ browserList + '</li>';
+  movieListPosterOverview
+}); 
+testLijst += '</ul>';
+document.getElementById("test").innerHTML = testLijst;
+
 // const movieListPosterOverview = movieList => {
 // let newli = document.createElement("li");
 // let newA = document.createElement("a");
