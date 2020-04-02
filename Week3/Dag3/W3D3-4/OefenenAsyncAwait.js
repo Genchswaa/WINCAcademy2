@@ -21,29 +21,28 @@ async function getData(){
     }
 }
 
-const moviesToDom = function() {
-    // console.log('moviesToDom wordt aangeroepen');
+// const moviesToDom = function() {
+//     // console.log('moviesToDom wordt aangeroepen');
     
-     data.map(function(data) {
-         listAvailablemovies(array);
-     });
-}
-moviesToDom();
+//      data.map(function(data) {
+//          listAvailablemovies(array);
+//      });
+// }
+// moviesToDom();
 
-
-const listAvailablemovies = function(array){
-    let availableMovies = document.getElementById("movies");
-    let newLi = document.createElement("li");
-    let newA = document.createElement("a");
-    for (let i = 0; i < getData.length; ++i) {
-        queryAll[i].innerHTML = li;
-      }
-    newLi.appendChild(newA);
-    availableMovies.appendChild(newLi);
-    return newLi;
-}
-listAvailablemovies();
-getData();
+// const listAvailablemovies = function(array){
+//     let availableMovies = document.getElementById("movies");
+//     let newLi = document.createElement("li");
+//     let newA = document.createElement("a");
+//     // for (let i = 0; i < getData.length; ++i) {
+//     //     queryAll[i].innerHTML = li;
+//     //   }
+//     newLi.appendChild(newA);
+//     availableMovies.appendChild(newLi);
+//     return newLi;
+// }
+// listAvailablemovies();
+// getData();
 //krijg data
 //ik wilde functie aanroepen als ik data heb
 //....
