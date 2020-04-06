@@ -1,0 +1,68 @@
+Opdracht 1:
+
+<img class="image-small cat" src="https://www.kasandbox.org/programming-images/animals/cat.png">
+        
+        
+<img class="image medium fox" src="https://www.kasandbox.org/programming-images/animals/fox.png">
+        
+        
+<img class="image-medium pinguin" src="https://www.kasandbox.org/programming-images/animals/penguins.png">
+
+Opdracht 2:
+<style>
+            
+h2.metal {
+                background-color: red;
+                color: white;
+            }
+            
+h2.non-metal {
+                background-color: blue;
+                color: white;
+            }
+            
+h2.semi-metal {
+                background-color: purple;
+                color: white;
+            }
+            
+        
+</style>
+
+Opdracht 3:
+<style>
+            
+.emperor {
+                font-family: cursive;
+            }
+            
+            
+.reign {
+                font-family: monospace;
+            }
+            
+table tbody tr td.emperor{
+                background-color: yellow;
+            }
+            
+        
+</style>
+
+Opdracht 4:
+ h1, h2 {
+    
+font-family: fantasy;
+                
+border-bottom: 1px solid rgb(230, 230, 230);
+                
+padding: 3px;
+            }
+            
+            
+
+h1:hover, h2:hover {
+                background-color: rgb(248, 255, 199);
+            }
+
+Opdracht 5:
+Score 5/5: Energypoints = 330
